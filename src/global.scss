@@ -24,3 +24,172 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.bg {
+	position: relative;
+}
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+.custom-shape-divider-top {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+.custom-shape-divider-bottom .shape-fill,
+.custom-shape-divider-top .shape-fill {
+    //fill: #FFFFFF;
+	fill: var(--ion-background-color, #fff);
+}
+
+.card {
+	cursor: pointer;
+}
+
+.bg-normal {
+	background-color: #A8A77A;
+	color: #fff;
+}
+
+.bg-fire {
+	background-color: #EE8130;
+	color: #fff;
+}
+
+.bg-water {
+	background-color: #6390F0;
+	color: #fff;
+}
+
+.bg-electric {
+	background-color: #F7D02C;
+	color: #fff;
+}
+
+.bg-grass {
+	background-color: #7AC74C;
+	color: #fff;
+}
+
+.bg-ice {
+	background-color: #96D9D6;
+	color: #fff;
+}
+
+.bg-fighting {
+	background-color: #C22E28;
+	color: #fff;
+}
+
+.bg-poison {
+	background-color: #A33EA1;
+	color: #fff;
+}
+
+.bg-ground {
+	background-color: #E2BF65;
+	color: #fff;
+}
+
+.bg-flying {
+	background-color: #A98FF3;
+	color: #fff;
+}
+
+.bg-psychic {
+	background-color: #F95587;
+	color: #fff;
+}
+
+.bg-bug {
+	background-color: #A6B91A;
+	color: #fff;
+}
+
+.bg-rock {
+	background-color: #B6A136;
+	color: #fff;
+}
+
+.bg-ghost, .bg-shadow {
+	background-color: #735797;
+	color: #fff;
+}
+
+.bg-dragon {
+	background-color: #6F35FC;
+	color: #fff;
+}
+
+.bg-dark {
+	background-color: #705746;
+	color: #fff;
+}
+
+.bg-steel {
+	background-color: #B7B7CE;
+	color: #fff;
+}
+
+.bg-fairy {
+	background-color: #D685AD;
+	color: #fff;
+}
+
+.bg-unknown {
+	background-color: #aaa;
+	color: #fff;
+}
+
+.action-sheet-group,
+.border-radius-1-5rem {
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+}
+
+.action-sheet-group {
+	max-height: 22em;
+	background-image: url("/assets/pokeball.png") !important;
+	background-repeat: no-repeat !important;  
+	background-position: center !important;
+	background-size: cover !important;
+	opacity: 0.8;
+	//mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+ion-item::part(native) {
+	background: transparent;
+}
+
+.pokemon-background .alert-wrapper {
+    background-image: url("/assets/pokeball.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.pokemon-background .alert-message {
+	color: var(--ion-text-color);
+}
