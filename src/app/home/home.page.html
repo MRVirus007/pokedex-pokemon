@@ -2,7 +2,7 @@
   <img src="assets/pokeball.png">
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button id="trigger-button">
         <ion-icon name="menu-outline"></ion-icon>
       </ion-button>
       <ion-button (click)="openActionSheet()">
@@ -25,6 +25,19 @@
 </ion-header>
 
 <ion-content fullscreen="true" scrollEvents="true" appHideHeader [header]="header">
+<ion-popover trigger="trigger-button">
+  <ng-template>
+    <ion-card>
+      <ion-item>
+        <ion-label><a target="_self" href="https://www.linkedin.com/in/mohammed-rokerya-3346a3144/">About Developer</a></ion-label>
+      </ion-item>
+    </ion-card>
+    <ion-row>
+      <ion-col>App is Made with Ionic-Angular by MR</ion-col>
+    </ion-row>
+  </ng-template>
+  
+</ion-popover>
   <div class="ion-padding">
     <ion-card *ngFor="let pokemon of pokemons; let i = index" class="bg-{{getType(pokemon)}}" (click)="goToDetails(pokemon.name)">
       <div class="mask">

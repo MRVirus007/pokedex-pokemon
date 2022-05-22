@@ -193,3 +193,7 @@ ion-item::part(native) {
 .pokemon-background .alert-message {
 	color: var(--ion-text-color);
 }
+
+.popover-content {
+	max-width: 50% !important;
+}
