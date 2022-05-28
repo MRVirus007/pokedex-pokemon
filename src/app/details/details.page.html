@@ -10,7 +10,10 @@
                 <div class="ion-margin-top">
                   <h1>{{pokemon.name | titlecase}}</h1>
                   <ion-badge *ngFor="let type of pokemon.types">
-                    <ion-icon name="{{setTypeIcon(type.type.name)}}"></ion-icon>
+                    <!-- <ion-icon name="{{setTypeIcon(type.type.name)}}"></ion-icon> -->
+                    <svg width="12" height="12" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" [attr.d]="setTypeIcon(type.type.name)" fill="#fff"/>
+                    </svg>
                     {{type.type.name | titlecase}}
                   </ion-badge>
                   <ion-list>
