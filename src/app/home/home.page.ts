@@ -92,7 +92,7 @@ export class HomePage {
             if (url === 'localhost') {
               location.href = "http://localhost:8100";
             } else {
-              location.href = url;
+              location.href = "https://pokedex.mrokerya.com/";
             }
           }
         },
