@@ -17,12 +17,12 @@ export class HomePage {
   loadMoreBtn: boolean = true;
   loading: boolean = false;
   subscriptions: Subscription[] = [];
-  constructor(private pokemonService: PokemonService, private router: Router, private actionSheet: ActionSheetController) {}
+  constructor(private pokemonService: PokemonService, private router: Router, private actionSheet: ActionSheetController) { }
   get pokemons(): any[] {
     return this.pokemonService.pokemons;
   }
 
-  set pokemons(pokemons){
+  set pokemons(pokemons) {
     this.pokemonService.pokemons = pokemons;
   }
 
@@ -67,7 +67,7 @@ export class HomePage {
   }
 
   goToDetails(name: any) {
-    if(typeof name === 'string' || name instanceof String) {
+    if (typeof name === 'string' || name instanceof String) {
       this.router.navigate(['/details', name.toLowerCase()]);
     } else {
       this.router.navigate(['/details', name.target.value.toLowerCase()]);
@@ -88,7 +88,12 @@ export class HomePage {
           icon: '',
           handler: () => {
             this.loadMoreBtn = true;
-            window.location.reload();
+            var url = window.location.hostname;
+            if (url === 'localhost') {
+              location.href = "http://localhost:8100";
+            } else {
+              location.href = url;
+            }
           }
         },
         {
